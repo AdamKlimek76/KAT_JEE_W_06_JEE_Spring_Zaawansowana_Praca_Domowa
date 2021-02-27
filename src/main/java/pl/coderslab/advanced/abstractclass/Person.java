@@ -1,6 +1,6 @@
-package pl.coderslab.advanced;
+package pl.coderslab.advanced.abstractclass;
 
-public class Person  {
+public class Person implements Comparable<Person> {
 
 	public Person(String firstName, String lastName) {
 		this.firstName = firstName;
@@ -30,7 +30,11 @@ public class Person  {
 	public String toString() {
 		return "lastName= " + lastName + " firstName, = " + firstName ;
 	}
-	
 
 
+	@Override
+	public int compareTo(Person person) {
+		return this.getLastName().substring(0, 2).compareTo(person.getLastName().substring(0, 2));
+
+	}
 }

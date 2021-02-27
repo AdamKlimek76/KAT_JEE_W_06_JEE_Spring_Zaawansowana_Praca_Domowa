@@ -9,17 +9,19 @@ public class Main {
 		// create group
 		GroupDao groupDao = new GroupDao();
 		Group g = new Group("sample name");
+		Group group = new Group("second group");
+		Group group1 = new Group("third group");
 		//save group to database
 		groupDao.save(g);
+		//groupDao.save(group);
+		//groupDao.save(group1);
 
 		//get all groups
 		List<Model> groups = groupDao.loadAll();
 		for (Model model : groups) {
-			Group group = (Group) model;
-			System.out.println(group.getName());
+			Group group2 = (Group) model;
+			System.out.println(group2.getName());
 		}
-
-
 
 
 		//update group
@@ -27,8 +29,8 @@ public class Main {
 		groupDao.save(g);
 
 		for (Model model : groups) {
-			Group group = (Group) model;
-			System.out.println(group.getName());
+			Group group2 = (Group) model;
+			System.out.println(group2.getName());
 		}
 		
 		//remove group
@@ -36,6 +38,8 @@ public class Main {
 		if (firstElement != null) {
 			groupDao.delete(firstElement);
 		}
+
+
 	}
 
 }

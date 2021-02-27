@@ -1,3 +1,7 @@
+CREATE SCHEMA IF NOT EXISTS `java_advanced_homework` DEFAULT CHARACTER SET utf8 ;
+
+USE `java_advanced_homework` ;
+
 CREATE TABLE `user_group` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_polish_ci NOT NULL
@@ -8,3 +12,4 @@ ALTER TABLE `user_group`
 
 ALTER TABLE `user_group`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+select * from user_group;

@@ -1,5 +1,7 @@
 package pl.coderslab.advanced.abstractclass;
 
+import pl.coderslab.advanced.abstractclass.Person;
+
 import java.util.Arrays;
 
 public class Main01 {
