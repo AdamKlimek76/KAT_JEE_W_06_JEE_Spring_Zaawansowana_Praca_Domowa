@@ -29,7 +29,7 @@ public class Main05 {
 
         DayOfWeek lastDayOfCurrentMonth = LocalDate.of(year, monthInt, daysOfMonth).getDayOfWeek();
         System.out.println(lastDayOfCurrentMonth);
-        
+
         DayOfWeek firstDayOfNextMonth =
                 LocalDate
                 .of(year + (int) Math.floor(monthInt + 1) / 12,
